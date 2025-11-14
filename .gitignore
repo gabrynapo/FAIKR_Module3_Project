@@ -1,2 +1,4 @@
 data/*
 bn_preprocessed.csv
+.venv/
+__pycache__/
