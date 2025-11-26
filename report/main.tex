@@ -94,17 +94,17 @@ As expected with imbalanced data, the standard threshold yielded high accuracy (
 \centering
 \small
 \begin{adjustbox}{max width=\columnwidth}
-\begin{tabular}{l|l|c}
+\begin{tabular}{l|c}
 \toprule
-\textbf{Scenario} & \textbf{Configuration} & \textbf{Risk P(Yes)} \\
+\textbf{Configuration} & \textbf{Risk P(Yes)} \\
 \midrule
-Bulletproof & Normal BMI, Great Sleep, Low Load, No Hist. & 1.22\% \\
-Positive Life & Positive Lifestyle & 9.55\% \\
-Baseline & No Evidence (Average Athlete) & 11.17\% \\
-Negative Life & Negative Lifestyle & 12.72\% \\
-Fragile & Underweight, High Stress & 14.33\% \\
-Overloaded & Obese, High Stress & 30.00\% \\
-Perfect Storm & Obese, Poor Sleep, High Load, Recent Inj. & 40.00\% \\
+Normal BMI, Great Sleep, Low Load, No Hist. & 1.22\% \\
+Positive Lifestyle & 9.55\% \\
+No Evidence (Average Athlete) & 11.17\% \\
+Negative Lifestyle & 12.72\% \\
+Underweight, High Stress & 14.33\% \\
+Obese, High Stress & 30.00\% \\
+Obese, Poor Sleep, High Load, Recent Inj. & 40.00\% \\
 \bottomrule
 \end{tabular}
 \end{adjustbox}
@@ -135,13 +135,15 @@ Safe Load & 67.6\% & The Load Paradox \\
 \label{tab:diagnostic}
 \end{table}
 
-The results validate the "Load Paradox". Only 21.1\% of injuries were associated with "High" acute workload spikes. The vast majority occurred under "Safe/Low" loads, but were strongly linked to compromised capacity (Recent Injury History 89.3\% and Low HRV), implying that most injuries are recurrences triggered by normal loads on a fragile system.
+The results validate the "Load Paradox"\cite{gabbett2016paradox}. Only 21.1\% of injuries were associated with "High" acute workload spikes. The vast majority occurred under "Safe/Low" loads, but were strongly linked to compromised capacity (Recent Injury History 89.3\% and Low HRV), implying that most injuries are recurrences triggered by normal loads on a fragile system.
 
 \section{Conclusion}
 This work demonstrates that a Bayesian Network can effectively model athletic injury risk using synthetic data.
-1. \textbf{Valid:} The model generalizes well (Test Set Recall 66.5\%).
-2. \textbf{Discriminatory:} It distinguishes between "Bulletproof" (1.2\%) and "Critical" (40.0\%) states.
-3. \textbf{Actionable:} It identifies that prevention should prioritise managing return-to-play (History) and lifestyle factors (Sleep/Stress) over simple load restriction.
+\begin{enumerate}
+    \item \textbf{Valid:} The model generalizes well (Test Set Recall 66.5\%).
+    \item \textbf{Discriminatory:} It distinguishes between "Bulletproof" (1.2\%) and "Critical" (40.0\%) states.
+    \item \textbf{Actionable:} It identifies that prevention should prioritise managing return-to-play (History) and lifestyle factors (Sleep/Stress) over simple load restriction.
+\end{enumerate}
 
 \section{Links to external resources}
 \begin{itemize}
